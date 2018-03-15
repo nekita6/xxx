@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Nikita Ignatchenko</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="shortcut icon" href="img/favicon.png" type="image/png">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+	<script src="js/menu.js"></script>
+	<script src="js/calc.js"></script>
+</head>
+<body>
+
+	<div id="header">
+		
+		<div class="menu_icon"></div>
+
+		<div class="menu">
+			<a href="about.html">Обо мне</a>
+			<a href="works.html">Работы</a>
+			<a href="skill.html">Навыки</a>
+			<a href="music.html">Музыка</a>
+			<a href="js.html">js*</a>
+		</div>
+		
+		<a href="contact.html" id="contact_text">
+			<pre>> Связаться со мной</pre>
+		</a>
+
+		<a href="contact.html" id="contact_icon"></a>
+
+		<a href="index.html" id="header_logo"></a>
+
+	</div>
+
+	<div class="title">
+		<pre>-  Я обязательно отвечу  -</pre>
+	</div>
+
+	<form>
+		<div class="wrapper">
+			<div id="calc">
+				<div>
+					<input id="longh" type="text" placeholder="Длина пути" maxlength="30" required autofocus>
+				</div>
+
+				<div>
+					<input id="weighth" type="text" placeholder="Вес товара" maxlength="30" required autofocus>
+				</div>
+
+				<div>
+					<input id="wraph" type="text" placeholder="Стоимость упаковки" maxlength="30" required autofocus>
+				</div>
+
+				<div>
+					<input id="insuranceh" type="text" placeholder="Страхование" maxlength="30" required autofocus>
+				</div>
+
+				<div id="submit" onclick="calc()">
+					Посчитать
+				</div>
+				<p id="out">Результат (₽):<br></p>
+			</div>
+		</div>
+	</form>
+
+	<div id="footer">
+
+		<a href="about.html">Обо мне</a>
+		<a href="works.html">Работы</a>
+		<a href="skill.html">Навыки</a>
+		<a href="music.html">Музыка</a>
+		<a href="js.html" class="clear_m_r">js*</a>
+		<br>
+		
+		<div class="social">
+			<a href="https://vk.com/notatikin" target="_blank">
+				<i class="fab fa-vk"></i>
+			</a>
+			<a href="https://www.instagram.com/ignatchenkon/" target="_blank">
+				<i class="fab fa-instagram"></i>
+			</a>
+			<a href="https://t.me/in008" class="clear_m_r" target="_blank">
+				<i class="fab fa-telegram-plane"></i>
+			</a>
+		</div>
+		
+	</div>
+
+</body>
+</html>
