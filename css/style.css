@@ -591,19 +591,6 @@ textarea{
 	padding: 3vh 3vh 0 3vh;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 #calc{
 	width: 220px;
 	padding: 24px 0;
@@ -640,11 +627,6 @@ textarea{
 	box-shadow: 0 6px 26px rgba(253, 29, 66, .48);
 }
 
-
-
-
-
-
 @media (max-width : 1024px){
 	.content{ 
 		width: 680px; 
@@ -656,21 +638,6 @@ textarea{
 		float: left;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media (max-width: 960px){
 	#header a{
@@ -735,19 +702,13 @@ textarea{
 		margin: 24px auto;
 	}
 
-
 	#for_music{
 		display: block;
-		padding-top: 20%;
+		padding-top: calc(25vh - 26.5px);
 		box-sizing: border-box;
 	}
 
 	#for_music a{
-		background: #17151C;
-		overflow: hidden;
-		transition: all 0.5s ease;
-		opacity: .1;
-		cursor: none;
 		display: none;
 	}
 
@@ -803,10 +764,8 @@ textarea{
 	#mym div{
 		padding: 3vh 3vh 0 3vh;
 	}
+}
 
-	#mym4 div{
-		padding: 0;
-	}
 
 @media (max-width: 740px){
 	.container{
