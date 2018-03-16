@@ -21,9 +21,10 @@ a{
 }
 
 #header{
-	background-color: #fcedf6;
 	height: 25vh;
 	width: 100%;
+	background-color: #fcedf6;
+	transition: all 0.5s;
 }
 
 #header a h2{
@@ -39,7 +40,7 @@ a{
 }
 
 #logo{
-	width: 15vh;
+	max-width: 15vh;
 	padding: 5vh 0;
 	z-index: 5;
 }
@@ -57,8 +58,8 @@ a{
 	line-height: 25vh;
 	float: left;
 	text-align: center;
-	transition: all 0.5s;
 	z-index: 0;
+	transition: all 0.5s;
 }
 
 #header a:hover,
@@ -78,7 +79,7 @@ a{
 }
 
 @media only screen
-and (max-width : 768px) {
+and (max-width : 638px) {
 	#header{
 		height: 100vh;
 		width: 100%;
@@ -116,7 +117,6 @@ and (max-width : 768px) {
 		width: calc(100%/3);
 		height: calc(100vh/7);
 		line-height: calc(100vh/7);
-		transition: all 0.5s;
 	}
 }
  
