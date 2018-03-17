@@ -48,6 +48,7 @@ a{
 #main{
 	height: calc(100vh/4*3);
 	background-color: #fcedf6;
+	transition: all 0.5s;
 }
 
 #main div,
@@ -59,7 +60,7 @@ a{
 	float: left;
 	text-align: center;
 	z-index: 0;
-	transition: all 0.5s;
+	transition: all 0.5s ease;
 }
 
 #header a:hover,
