@@ -11,6 +11,9 @@
 <body onclick="setRandomColor()">
 	<script src="http://code.jquery.com/jquery-3.3.1.js"></script>
 	
+
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
 	<div id="header">
 		<a href="about.html" id="h1">
 			<h1>A</h1>
@@ -129,19 +132,31 @@
 	<script>
 
 		function getRandomColor() {
-		  var letters = '0123456789ABCDEF';
-		  var color = '#';
-		  for (var i = 0; i < 6; i++) {
-		    color += letters[Math.floor(Math.random() * 16)];
-		  }
-		  console.log( color );
-		  return color;
+
+			var r=Math.floor(Math.random() * (256));
+			var g=Math.floor(Math.random() * (256));
+			var b=Math.floor(Math.random() * (256));
+			var color = 'rgb(' + r + ',' + g  + ',' + b + ')';
+			var ctext;
+
+			if (r < 220 && g < 220 && b < 220){
+				cotxt = '#ffffff'
+			} else{
+				cotxt = '#17151c'
+			}
+
+			console.log( color, cotxt);
+			return color;
+			return cotxt;
+
 		}
 
 		function setRandomColor() {
+
+			$("body, #header, #header a, #main, #main div").css("background-color", getRandomColor());
 			$("h1, h2").css("color", "white");
-			$("body #header, #header a, #main, #main div").css("background-color", getRandomColor());
 			$("#logo").css("fill", "white");
+
 		}
 
 		var timerId = setInterval(function() { setRandomColor(); }, 10000);

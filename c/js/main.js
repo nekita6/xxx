@@ -1,18 +1,22 @@
 var s = Snap('#love');
 
-var bigCircle = s.circle(150, 150, 100);
+var bigCircle1 = s.circle(150, 150, 50);
+var bigCircle2 = s.circle(150, 150, 50);
+var bigCircle3 = s.circle(150, 150, 50);
+var bigCircle4 = s.circle(150, 150, 50);
+var bigCircle5 = s.circle(150, 150, 50);
+var bigCircle6 = s.circle(150, 150, 50);
 
-bigCircle.attr({
-	fill: "#fff"
-});
-bigCircle.drag();
+bigCircle1.drag();
+bigCircle2.drag();
+bigCircle4.drag();
+bigCircle3.drag();
+bigCircle5.drag();
+bigCircle6.drag();
 
-paper.path(Snap.format("M{x},{y}h{dim.width}v{dim.height}h{dim['negative width']}z", {
-    x: 10,
-    y: 20,
-    dim: {
-        width: 40,
-        height: 50,
-        "negative width": -40
-    }
-}));
+bigCircle1.node.onclick = function () {
+	bigCircle1.attr("fill", "#171ef5");
+	console.log(bigCircle1)
+}
+
+
