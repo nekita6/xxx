@@ -1,16 +1,38 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+	
 	<meta charset="UTF-8">
-	<title>Nikita Ignatchenko</title>
+
+	<title>Кто дисигнир? я шоли?</title>
+
+	<meta name="author" content="Никита Игнатченко">
+
+	<meta name="keywords" content="Никита Игнатченко, Веб-дизайн, создание сайтов под ключ, дизайн интерфейсов, дизайн визиток Донецк">
+
+	<meta name="description" content="Личный сайт веб-дизайнера Никиты Игнатченко. Основные направления — графический дизайн, создание сайтов, проектирование интерфейсов, фирменный стиль...">
+
+	<meta name="revisit-after" content="7 days">
+
+	<meta name="robots" content="index, follow">
+
+	<meta name="Publisher-Email" Content="notatikin@ya.ru">
+	
+	<meta name="Publisher-URL" Content="http://x000x.ga">
+
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="canonical" href="http://x000x.ga">
+
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="shortcut icon" href="img/favicon.png" type="image/png">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="shortcut icon" href="img/favicon.png" type="image/png">
+	
 	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 	<script src="http://code.jquery.com/jquery-3.3.1.js"></script>
 	<script src="js/menu.js"></script>
 	<script src="js/calc.js"></script>
+
 </head>
 <body>
 
@@ -48,21 +70,22 @@
 				</div>
 
 				<div>
-					<input id="weighth" type="text" placeholder="Вес товара" maxlength="30" required autofocus>
+					<input id="weighth" type="text" placeholder="Вес товара" maxlength="30" required>
 				</div>
 
 				<div>
-					<input id="wraph" type="text" placeholder="Стоимость упаковки" maxlength="30" required autofocus>
+					<input id="wraph" type="text" placeholder="Стоимость упаковки" maxlength="30" required>
 				</div>
 
 				<div>
-					<input id="insuranceh" type="text" placeholder="Страхование" maxlength="30" required autofocus>
+					<input id="insuranceh" type="text" placeholder="Страхование" maxlength="30" required>
 				</div>
 
 				<div id="submit" onclick="calc()">
 					Посчитать
 				</div>
-				<p id="out">Результат (₽):<br></p>
+				<p>Результат (₽):</p>
+				<p id="out"></p>
 			</div>
 		</div>
 	</form>

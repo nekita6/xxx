@@ -128,8 +128,41 @@
 
 	<script>
 
-		
-		
+		function preventSelection(element){
+
+			function addHandler(element, event, handler){
+				if (element.attachEvent) 
+				element.attachEvent('on' + event, handler);
+				else 
+				if (element.addEventListener) 
+				element.addEventListener(event, handler, false);
+			}
+
+			function removeSelection(){
+				if (window.getSelection) { window.getSelection().removeAllRanges(); }
+				else if (document.selection && document.selection.clear)
+				document.selection.clear();
+			}
+
+			addHandler(element, 'mousemove', function(){
+				if(preventSelection)
+				removeSelection();
+				});
+				addHandler(element, 'mousedown', function(event){
+				var event = event || window.event;
+				var sender = event.target || event.srcElement;
+				preventSelection = !sender.tagName.match(/INPUT|TEXTAREA/i);
+			});
+
+			addHandler(element, 'mouseup', function(){
+				if (preventSelection)
+				removeSelection();
+				preventSelection = false;
+			});
+
+		}
+
+		preventSelection(document);
 
 		function getRandomColor() {
 

@@ -18,7 +18,7 @@ function calc() {
 		(weight > 40) ? 'ОШИБКА! (Максимальный вес груза 40кг)' :
 		long*21 + weight*10 + wrap + insurance  ;
 
-	document.getElementById('out').innerHTML += result;
+	document.getElementById('out').innerHTML = result;
 
 }
 
