@@ -68,6 +68,17 @@ svg{
 	cursor: pointer;
 }
 
+.open_icon{
+	background: url(../img/open_menu.svg) no-repeat;
+	background-position: center center;
+	padding: 42px 0;
+	width: 26px;
+	margin-left: 28px;
+	float: left;
+	display: none;
+	cursor: pointer;
+}
+
 #header a{ 
 	line-height: 80px;
 	float: left;
@@ -504,15 +515,15 @@ textarea{
 }
 
 #for_music{
-	display: grid;
- 	grid-template-columns: auto auto auto auto auto auto;
 	width: 100%;
 	height: calc(100vh - 106px);
 	background: #17151C;
 	color: #fffcfc;
 }
 
-#for_music a{
+#for_music div a{
+	display: block;
+	height: calc(25vh - 26.5px);	
 	background: #17151C;
 	overflow: hidden;
 	transition: all 0.5s ease;
@@ -520,60 +531,71 @@ textarea{
 	cursor: none;
 }
 
+#for_music div .artist_x2{
+	height: calc(50vh - 53px);
+}
+
+#col_1,
+#col_2,
+#col_5,
+#col_6{
+	float: left;
+	width: calc(100%/6);
+	height: calc(100vh - 106px);
+}
+
+#col_x2{
+	float: left;
+	width: calc(100%/3);
+	height: calc(100vh - 106px);
+}
+
+#for_music #col_x2 .artist{
+	float: left;
+	width: 50%;
+}
+
+
+#for_music #col_x2 .artist_x4{
+	width: 100%;
+	height: calc(50vh - 53px);
+	background: linear-gradient(-145deg, #fd1d42, #fd6342);
+	color: #fff;
+	font-size: 6vh;
+	font-weight: bold;
+	opacity: 1;
+}
+
 #for_music a:hover{
 	opacity: .5;
-}
+}	
 
 #for_music a img{
 	max-width: 100%;
 	min-height: 100%;
 }	
 
-#for_music a:nth-child(8){
-	grid-row-start: 2;
-	grid-row-end: 4;
-	grid-column-start: 2;
-	grid-column-end: 3;
-}
-
-#for_music a:nth-child(9){
-	grid-row-start: 2;
-	grid-row-end: 4;
-	grid-column-start: 3;
-	grid-column-end: 5;
-	background: linear-gradient(-75deg, #fd1d42, #fd6342);
-	color: #fff;
-	font-size: 6vh;
-	line-height: 5vh;
-	font-weight: bold;
-	opacity: 1;
-}
-
-#for_music a:nth-child(10){
-	grid-row-start: 2;
-	grid-row-end: 4;
-	grid-column-start: 5;
-	grid-column-end: 6;
-}
-
-#for_music a:nth-child(9):hover{
-	opacity: 1;
-}
-
 #mym,
 #mym2,
 #mym3,
 #mym4{
-	width: calc(100%/2);
-	min-height: calc(25vh - 26.5px);
+	width: 50%;
+	height: 50%;
 	display: block;
 	float: left;
+	transition: all 0.5s ease;
 }
 
 #mym3,
 #mym2{
 	background: #fff;
 	opacity: .1;
+}
+
+#mym3:hover,
+#mym2:hover{
+	background: #fff;
+	opacity: .36;
 }
 
 #mym4{
@@ -588,7 +610,8 @@ textarea{
 }
 
 #mym div{
-	padding: 3vh 3vh 0 3vh;
+	padding: 1vw 1vw 0 1vw;
+	line-height: 5vh;
 }
 
 #calc{
@@ -636,7 +659,7 @@ textarea{
 	.work{ 
 		margin: 24px 10px 0 10px;
 		float: left;
-	}
+	}	
 }
 
 @media (max-width: 960px){
@@ -647,17 +670,18 @@ textarea{
 	.menu{
 		z-index: 5;
 		transition: all 0.35s;
-	 	display: none;
-	}
-	
-
-	.menu.open{
-		width: 100%;
-		position: absolute;
-		background: #fffcfc; 
+	 	position: absolute;
+	 	background: #fffcfc; 
 		top: 80px;
 		left: 0;
 		display: block;
+		width: 100%;
+		height: calc(100vh - 80px);
+	 	transform: translateX(-100%);
+	}
+	
+	.menu.open{
+		transform: translateX(0%);
 	}
 	
 	.menu a{
@@ -666,7 +690,7 @@ textarea{
 		float: none;
 		text-align: center;
 	}
-
+	
 	.menu_icon{
 		display: block;
 	}
@@ -701,71 +725,6 @@ textarea{
 		float: none; 
 		margin: 24px auto;
 	}
-
-	#for_music{
-		display: block;
-		padding-top: calc(25vh - 26.5px);
-		box-sizing: border-box;
-	}
-
-	#for_music a{
-		display: none;
-	}
-
-	#for_music a:hover{
-		opacity: .5;
-	}
-
-	#for_music a:nth-child(8){
-		display: none;
-	}
-
-	#for_music a:nth-child(9){
-		display: block;
-		width: 80%;
-		margin: 0 auto;
-		background: linear-gradient(-75deg, #fd1d42, #fd6342);
-		color: #fff;
-		font-size: 6vh;
-		line-height: 5vh;
-		font-weight: bold;
-		opacity: 1;
-	}
-
-	#for_music a:nth-child(10){
-		display: none;
-	}
-
-	#for_music a:nth-child(9):hover{
-		opacity: 1;
-	}
-
-	#mym,
-	#mym2,
-	#mym3,
-	#mym4{
-		width: calc(100%/2);
-		min-height: 25vh;
-		display: block;
-		float: left;
-	}
-
-	#mym4{
-		background: rgba(255, 255, 255, .2);
-		text-align: center;
-		line-height: 25vh;
-		color: rgba(255, 255, 255, .08);
-	}
-
-	#mym4:hover{
-		color: rgba(255, 255, 255, .16);
-	}
-
-	#mym div{
-		padding: 3vh 3vh 0 3vh;
-	}
-}
-
 
 @media (max-width: 740px){
 	.container{
@@ -875,6 +834,33 @@ textarea{
 		margin: auto;
 		width: 80px;
 		height: 80px;
+	}
+}
+
+@media (max-width : 600px){
+	#for_music{
+		width: 100%;
+		height: calc(100vh - 106px);
+		background: #17151C;
+		color: #fffcfc;
+	}
+
+	#for_music div a{
+		display: none;
+	}
+
+	#for_music #col_x2 .artist_x4{
+		display: block;
+		position: absolute;
+		top: calc(10% - 21.2px);
+		height: calc(80vh - 53px);
+		width: 80%;
+		left: 10%;
+		right: 10%;
+	}
+
+	#mym4{
+		line-height: calc(40vh - 26.5px);
 	}
 }
 
