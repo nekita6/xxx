@@ -19,6 +19,7 @@ function calc() {
 		(long > 2000) ? 'ОШИБКА!<br>Максимальный путь перевозки <b>2000км</b>' :
 		(weight > 40) ? 'ОШИБКА!<brМаксимальный вес груза <b>40кг</b>' :
 		(long < 0 || weight < 0 || wrap < 0 || insurance < 0) ? 'Вы ввели отрицательное значение!<br><b>НЕ НАДО ТАК!</b>' :
+		// (long.length === 0 || weight.length === 0 || wrap.length === 0 || insurance.length < 1) ? 'Ы' :
 
 	long*21 + weight*10 + wrap + insurance  ;
 

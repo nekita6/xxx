@@ -1,45 +1,43 @@
-<!doctype html>
-<html lang="ru">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
 	<title>Ruslan Chudin</title>
-	<link href="CSS.css" rel="stylesheet" type="text/css">
-	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-	<script src="menu.js"></script>
-	<script src="main.js"></script>
+	<link rel="stylesheet" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+	<script src="js/menu.js"></script>
+	<script src="js/main.js"></script>
 </head>
 <body>
+	
+	<a href="index.html" id="back_icon"></a>
+	<div id="menu_icon"></div>
 
-	<div class="head">
-		<h4>Хобби</h4>
-	</div>
-
-	<div class="back_icon"><a href="main.html"><img src="back.png" alt="Меню"></a></div>
-	<div class="menu_icon"><img src="menu.png" alt="Меню"></div>
-
-	<div class="menu">
-		<a href="main.html">Главная</a>
+	<div id="menu">
 		<a href="portfolio.html">Портфолио</a>
 		<a href="program.html">Программы</a>
+		<a href="hobby.html">Хобби</a>
 		<a href="contact.html">Контакты</a>
 	</div>
 
-	<div class="content">
-		<div id="mid-text">
-    		<p>simple text</p>
-    			<div class="move-wrap">
-  						<div id="follower"></div>
-				</div>
-	    </div>
-	</div>	
+	<div id="header">
+		<h2>Хобби</h2>
+	</div>
+	
+	<div id="content">
+		<div class="mid_text">
+			<div class="move-wrap">
+				<div id="follower"></div>
+			</div>
+		</div>
+	</div>
 
-	<div id="footer">
-		<a href="main.html">главная</a>
+	<div class="footer footer_x">
+		<a href="portfolio.html">главная</a>
 		<a href="portfolio.html">портфолио</a>
 		<a href="contact.html">контакты</a>
 		<a href="program.html">программы</a>
 	</div>
-
 </body>
 </html>

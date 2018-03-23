@@ -44,9 +44,9 @@ h1:hover {
 #back_icon {
 	background: url(../img/close.svg) no-repeat;
 	background-position: center center;
-	height: 21px;
+	height: 20px;
 	width: 21px;
-	margin: 14.5px 0;
+	margin: 15px 0;
 	display: block;
 	position: absolute;
 	right: 2%;
@@ -106,7 +106,22 @@ h1:hover {
 	background-position: center center;
 }
 
-@media (max-width: 768px) {
+.move-wrap {
+	width: 150px;
+	height: 150px;
+	overflow: hidden;
+	border: 1px solid #000000;
+}
+
+#follower{
+	position : relative;
+	background-color : #000;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+}
+
+@media (max-width: 768px), (max-height: 320px) {
 
 	#header a,
 	#left a,
@@ -118,6 +133,7 @@ h1:hover {
 	#content {
 		left: 0;
 		right: 0;
+		bottom: 2%;
 	}
 	
 	#menu_icon {
