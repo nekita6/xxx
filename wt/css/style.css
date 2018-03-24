@@ -9,7 +9,7 @@ html{
 
 body{
 	height: 100%;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Open sans', sans-serif;
 	font-size: 16px;
 	color: #17151c;
 	background-color: #fcedf6;
@@ -30,17 +30,13 @@ h3{
 p{
 	line-height: 1.6; 
 	font-style: italic; 
+	font-weight: lighter;
 }
 
 a{
 	text-decoration: none;
 	font-style: normal; 
 	color: #17151c; 
-}
-
-pre{
-	font-style: normal; 
-	font-size: 18px; 
 }
 
 svg{
@@ -86,7 +82,8 @@ svg{
 	transition: all 0.5s ease;
 }
 
-#header a:hover{ 
+
+#header a:hover { 
 	box-shadow: 0px 1px 0px #17151c, 0px -1px 0px #17151c;
 }
 
@@ -177,6 +174,7 @@ svg{
 }
 
 .news{
+	position: relative;
 	display: block;
 	height: 135px;
 	margin-top: 24px;
@@ -198,15 +196,15 @@ svg{
 }
 
 .news h1{ 
-	margin: 12px 0 0 16px; 
+	padding: 12px 0 0 16px; 
 } 
 
 .news h3{ 
-	margin: 12px 16px 0 0; 
+	padding: 12px 16px 0 0; 
 } 
 
 .news p{ 
-	margin: 6px 6px 0 16px; 
+	padding: 6px 6px 12px 16px; 
 }
 
 .news h3{ 
@@ -215,9 +213,7 @@ svg{
 
 .news p{ 
 	width: 280px; 
-	height: 78px; 
 	font-size: 14px; 
-	overflow: hidden;  
 }
 
 .news_img{ 
@@ -226,7 +222,9 @@ svg{
 }
 
 .news_img img{  
-	float: right; 
+	position: absolute;
+	right: 0;
+	bottom: 0;
 }
 
 #footer{
@@ -240,8 +238,14 @@ svg{
 }
 
 #footer a{
-	margin-right: 12px;
+	margin-right: 10px;
 	font-size: 14px;
+	opacity: .7;
+	transition: opacity 0.5s ease; 
+}
+
+#footer a:hover{ 
+	opacity: 1; 
 }
 
 #footer .clear_m_r, #footer .social .clear_m_r{
@@ -256,15 +260,6 @@ svg{
 	margin-top: 10px;
 }
 
-.social a{ 
-	opacity: .66; 
-	transition: opacity 0.5s ease; 
-}
-
-.social a:hover{ 
-	opacity: 1; 
-}
-
 .title{
 	width: 100%;
 	height: 50px;
@@ -273,8 +268,8 @@ svg{
 	background: rgba(255, 252, 252, .66);
 }
 
-.title pre{
-	font-size: 18px;
+.title h2{
+	font-size: 16px;
 	font-weight: bold;
 }
 
@@ -332,7 +327,6 @@ svg{
 
 .content{ 
 	width: 1020px; 
-	
 	margin: auto; 
 }
 
@@ -726,7 +720,6 @@ textarea{
 		margin: 24px auto;
 	}
 
-@media (max-width: 740px){
 	.container{
 		padding: 22px 0;
 		width: 100%;
@@ -735,14 +728,16 @@ textarea{
 	.left_column{
 		display: block;
 		margin: auto;
-		width: 320px;
+		min-width: 320px;
+		width: 90%;
 		float: none;
 	}
 
 	.right_column{
 		display: block;
 		margin: auto;
-		width: 320px;
+		min-width: 320px;
+		width: 90%;
 		float: none;
 	}
 
@@ -756,23 +751,24 @@ textarea{
 		overflow: hidden; 
 	}
 
-	.news_img img{  
-		float: right; 
+	.news h1{ 
+		min-width: 228px; 
+		width: calc(100% - 32px);	
 	}
 
-	.news h1{ 
-		width: 228px; 
-		margin-bottom: 8px; 
-		font-weight: normal; 
+	.news p{ 
+		min-width: 228px; 
+		width: calc(100% - 32px);
 	}
-
-	.news h1{ 
-		margin: 12px 0 0 16px; 
-	} 
 
 	.news h3{ 
 		float: none; 
-		margin: 8px 0 0 16px;
+		margin: 0 0 0 16px;
+		padding: 0;
+	}
+
+	.news_img img{
+		clear: both;
 	}
 
 	.skill{
