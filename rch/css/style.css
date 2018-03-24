@@ -44,9 +44,8 @@ h1:hover {
 #back_icon {
 	background: url(../img/close.svg) no-repeat;
 	background-position: center center;
-	height: 20px;
-	width: 21px;
-	margin: 15px 0;
+	height: 50px;
+	width: 22px;
 	display: block;
 	position: absolute;
 	right: 2%;
@@ -139,9 +138,8 @@ h1:hover {
 	#menu_icon {
 		background: url(../img/menu.svg) no-repeat;
 		background-position: center center;
-		height: 18px;
+		height: 50px;
 		width: 28px;
-		margin: 16px 0;
 		display: block;
 		position: absolute;
 		left: 2%;
