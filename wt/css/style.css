@@ -127,8 +127,8 @@ svg{
 	height: 200px;
 	background: rgba(255, 252, 252, .66) no-repeat;
 	background-image: url(../img/title_bg.png);
-	background-position: center center;
-	background-size: contain;
+	background-position: top center;
+	background-size: cover;
 	text-align: center;
 }
 
@@ -719,6 +719,12 @@ textarea{
 		display: block; 
 		float: none; 
 		margin: 24px auto;
+	}
+	
+	#main_title{
+		background-position: center center;
+		background-size: contain;
+		text-align: center;
 	}
 
 	.container{
