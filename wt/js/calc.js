@@ -3,15 +3,16 @@ function calc() {
 	var long, weight, wrap, insurance;
 
 	long = document.getElementById('longh').value;
-	long = parseInt(long);
-
 	weight = document.getElementById('weighth').value;
-	weight = parseInt(weight);
-
 	wrap = document.getElementById('wraph').value;
-	wrap = parseInt(wrap);
-
 	insurance = document.getElementById('insuranceh').value;
+	
+	if (long =='' || weight =='' || wrap =='' || insurance =='')
+		alert('Немножко пусто!');
+	
+	long = parseInt(long); 
+	weight = parseInt(weight);
+	wrap = parseInt(wrap);
 	insurance = parseInt(insurance);
 
 	result = 
