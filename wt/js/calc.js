@@ -6,19 +6,25 @@ function calc() {
 	var insurance = document.getElementById('insuranceh').value;
 	var valid = /[^\d,.]/g;
 
-	if (long =='' || weight =='' || wrap =='' || insurance =='' || long == 0 || weight == 0 || long =='.' || weight =='.' || wrap =='.' || insurance =='.')
-		alert('Немножко пусто! \nДлина пути и вес не могут быть равны 0\nВводите только положительные числовые значение.')
+	if (long =='' || weight =='' || wrap =='' || insurance =='')
+		alert('Немножко пусто! \nВсе поля обяхательны для заполнения')
 	
+	else if (long =='.' || weight =='.' || wrap =='.' || insurance =='.' || long ==',' || weight ==',' || wrap ==',' || insurance ==',')
+		alert('Вводите только положительные числовые значение.')
+
+	else if (long == 0 || weight == 0)
+		alert('Длина пути и вес не могут быть равны 0')
+
 	else if (valid.test(long) == true || valid.test(weight) == true || valid.test(wrap) == true || valid.test(insurance) == true)
 		alert('Вводите только положительные числовые значение.')
 	
 	else if (long > 2000){
-		result = 'ОШИБКА!<br>Максимальный путь перевозки <b>2000км</b>';
+		result = 'ОШИБКА! Максимальный путь перевозки 2000км';
 		alert(result)
 	}
 	
 	else if (weight > 40){
-		result = 'ОШИБКА!<br>Максимальный вес груза <b>40кг</b>';
+		result = 'ОШИБКА! Максимальный вес груза 40кг';
 		alert(result)
 	}
 	
