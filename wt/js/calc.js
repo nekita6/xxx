@@ -6,8 +6,8 @@ function calc() {
 	var insurance = document.getElementById('insuranceh').value;
 	var valid = /[^\d,.]/g;
 
-	if (long =='' || weight =='' || wrap =='' || insurance =='' || long == 0 || weight == 0)
-		alert('Немножко пусто! Длина пути и вес не могут быть равны 0')
+	if (long =='' || weight =='' || wrap =='' || insurance =='' || long == 0 || weight == 0 || long =='.' || weight =='.' || wrap =='.' || insurance =='.')
+		alert('Немножко пусто! \nДлина пути и вес не могут быть равны 0\nВводите только положительные числовые значение.')
 	
 	else if (valid.test(long) == true || valid.test(weight) == true || valid.test(wrap) == true || valid.test(insurance) == true)
 		alert('Вводите только положительные числовые значение.')
