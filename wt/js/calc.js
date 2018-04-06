@@ -4,13 +4,13 @@ function calc() {
 	var weight = document.getElementById('weighth').value;
 	var wrap = document.getElementById('wraph').value;
 	var insurance = document.getElementById('insuranceh').value;
-	var valid = /[^\d,]/g;
+	var valid = /[^\d,.]/g;
 
-	if (long =='' || weight =='' || wrap =='' || insurance =='')
-		alert('Немножко пусто!')
+	if (long =='' || weight =='' || wrap =='' || insurance =='' || long == 0 || weight == 0)
+		alert('Немножко пусто! Длина пути и вес не могут быть равны 0')
 	
 	else if (valid.test(long) == true || valid.test(weight) == true || valid.test(wrap) == true || valid.test(insurance) == true)
-		alert('Вводите только положительные числовые значение, пожалуйста')
+		alert('Вводите только положительные числовые значение.')
 	
 	else if (long > 2000){
 		result = 'ОШИБКА!<br>Максимальный путь перевозки <b>2000км</b>';
