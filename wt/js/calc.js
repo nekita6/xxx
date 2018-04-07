@@ -6,8 +6,8 @@ function calc() {
 	var insurance = document.getElementById('insuranceh').value;
 	var valid = /[^\d,.]/g;
 
-	if (long =='' || weight =='' || wrap =='' || insurance =='')
-		alert('Немножко пусто! \nВсе поля обяхательны для заполнения')
+	if (long =='' || weight =='')
+		alert('Немножко пусто! \nДлина пути и вес товара обязательны для заполнения')
 	
 	else if (long =='.' || weight =='.' || wrap =='.' || insurance =='.' || long ==',' || weight ==',' || wrap ==',' || insurance ==',')
 		alert('Вводите только положительные числовые значение.')
