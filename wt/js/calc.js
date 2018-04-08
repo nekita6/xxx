@@ -1,22 +1,53 @@
+document.getElementById('longh').onkeypress = function(event) {
+	if (event.keyCode < 46 || event.keyCode > 57) {
+		return false;
+	} else if (event.keyCode == 47) {
+		return false;
+	}
+}
+
+document.getElementById('weighth').onkeypress = function(event) {
+	if (event.keyCode < 46 || event.keyCode > 57) {
+		return false;
+	} else if (event.keyCode == 47) {
+		return false;
+	}
+}
+
+document.getElementById('wraph').onkeypress = function(event) {
+	if (event.keyCode < 46 || event.keyCode > 57) {
+		return false;
+	} else if (event.keyCode == 47) {
+		return false;
+	}
+}
+
+document.getElementById('insuranceh').onkeypress = function(event) {
+	if (event.keyCode < 46 || event.keyCode > 57) {
+		return false;
+	} else if (event.keyCode == 47) {
+		return false;
+	}
+}
+
+document.onkeypress = function(event) {
+	if (event.keyCode == 13) {
+		calc();
+	}
+}
+
 function calc() {
 
 	var long = document.getElementById('longh').value;
 	var weight = document.getElementById('weighth').value;
 	var wrap = document.getElementById('wraph').value;
 	var insurance = document.getElementById('insuranceh').value;
-	var valid = /[^\d,.]/g;
 
 	if (long =='' || weight =='')
 		alert('Немножко пусто! \nДлина пути и вес товара обязательны для заполнения')
-	
-	else if (long =='.' || weight =='.' || wrap =='.' || insurance =='.' || long ==',' || weight ==',' || wrap ==',' || insurance ==',')
-		alert('Вводите только положительные числовые значение.')
 
 	else if (long == 0 || weight == 0)
 		alert('Длина пути и вес не могут быть равны 0')
-
-	else if (valid.test(long) == true || valid.test(weight) == true || valid.test(wrap) == true || valid.test(insurance) == true)
-		alert('Вводите только положительные числовые значение.')
 	
 	else if (long > 2000){
 		result = 'ОШИБКА! Максимальный путь перевозки 2000км';
