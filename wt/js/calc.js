@@ -37,9 +37,6 @@ function calc() {
 	else if (long == 0 || weight == 0)
 		alert('Длина пути и вес не могут быть равны 0')
 
-	else if (long =='.' || weight =='.' || wrap =='.' || insurance =='.' || long ==',' || weight ==',' || wrap ==',' || insurance ==',')
-		alert('Вводите только положительные числовые значение.')
-
 	else if (valid.test(long) == true || valid.test(weight) == true || valid.test(wrap) == true || valid.test(insurance) == true)
 		alert('Вводите только положительные числовые значение.')
 	
@@ -55,7 +52,10 @@ function calc() {
 	
 	else {
 		result = long*21 + weight*10 + wrap*1 + insurance*1;
-		document.getElementById('out').innerHTML = result + ' ₽';
+		if (isNaN(result) == true)	
+			document.getElementById('out').innerHTML = 'Наверное, Вы ввели ... ;)';
+		else	
+			document.getElementById('out').innerHTML = result + ' ₽';
 	}
 
 }
