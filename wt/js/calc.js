@@ -1,39 +1,26 @@
 document.getElementById('longh').onkeypress = function(event) {
-	if (event.keyCode < 46 || event.keyCode > 57) {
-		return false;
-	} else if (event.keyCode == 47) {
-		return false;
-	}
+	if (event.charCode < 46 || event.charCode > 57) return false
+	else if (event.charCode == 47) return false
 }
 
 document.getElementById('weighth').onkeypress = function(event) {
-	if (event.keyCode < 46 || event.keyCode > 57) {
-		return false;
-	} else if (event.keyCode == 47) {
-		return false;
-	}
+	if (event.charCode < 46 || event.charCode > 57) return false
+	else if (event.charCode == 47) return false
 }
 
 document.getElementById('wraph').onkeypress = function(event) {
-	if (event.keyCode < 46 || event.keyCode > 57) {
-		return false;
-	} else if (event.keyCode == 47) {
-		return false;
-	}
+	if (event.charCode < 46 || event.charCode > 57) return false
+	else if (event.charCode == 47) return false
 }
 
 document.getElementById('insuranceh').onkeypress = function(event) {
-	if (event.keyCode < 46 || event.keyCode > 57) {
-		return false;
-	} else if (event.keyCode == 47) {
-		return false;
-	}
+	if (event.charCode < 46 || event.charCode > 57) return false
+	else if (event.charCode == 47) return false
 }
 
 document.onkeypress = function(event) {
-	if (event.keyCode == 13) {
-		calc();
-	}
+	console.log(event.code , event.charCode)
+	if (event.keyCode == 13) calc()
 }
 
 function calc() {
@@ -42,7 +29,7 @@ function calc() {
 	var weight = document.getElementById('weighth').value;
 	var wrap = document.getElementById('wraph').value;
 	var insurance = document.getElementById('insuranceh').value;
-	var valid = /[^\d,.]/g;
+	var valid = /[^\d+,.]/g;
 
 	if (long =='' || weight =='')
 		alert('Немножко пусто! \nДлина пути и вес товара обязательны для заполнения')
@@ -74,7 +61,7 @@ function calc() {
 }
 
 
-/*10 – калькулятор для расчета стоимости доставки товара (задаются длина
+/*/*10 – калькулятор для расчета стоимости доставки товара (задаются длина
 пути, вес товара или габариты, стоимость упаковки, страхование). Формулу
 расчета придумать самостоятельно;
 */
