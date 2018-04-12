@@ -5,7 +5,7 @@ var change;
 var touch;
 var	startingX;
 
-menu_icon.onclick = function openMenu() {
+function openMenu() {
 
 	menu.style.left = '0';
 	menu_icon.style.display = 'none'
@@ -13,13 +13,16 @@ menu_icon.onclick = function openMenu() {
 
 }
 
-open_icon.onclick = function closeMenu() {
+function closeMenu() {
 
 	menu.style.left = '-100%';
 	menu_icon.style.display = 'block'
 	open_icon.style.display = 'none'
 
 }
+
+menu_icon.onclick = function() { openMenu() }
+open_icon.onclick = function() { closeMenu() }
 
 document.ontouchstart = function startTouches(e) {
 	
@@ -31,38 +34,24 @@ document.ontouchmove = function moveTouches(e) {
 	
 	touch = e.touches[0];
 	change = startingX - touch.clientX;
-	change = -change;
 
-	if (change > 0 && change <= window.screen.width) {
-		menu.style.left = 'calc(-100% + ' + change*1.681 + 'px)';
-	}
-	if (change < 0) {
-		menu.style.left = 'calc(-100% - ' + change/1.681 + 'px)';
-	}
+	if (change < 0) { menu.style.left = 'calc(-100% - ' + change + 'px)' }
+
+	else { menu.style.left = 'calc(-100% + ' + change + 'px)' }
 
 }
 
 document.ontouchend = function moveTouches(e) {
 	
-	if (change > 150) {
-		menu.style.left = '0';
-		menu_icon.style.display = 'none'
-		open_icon.style.display = 'block'
-	}
+	if (change < -150) { openMenu() }
 
-	else {
-		menu.style.left = '-100%';
-		menu_icon.style.display = 'block'
-		open_icon.style.display = 'none'
-	}
+	else { closeMenu() }
 	
 }
 
 window.onresize = function(event) {
 
-	menu.style.left = '-100%';
-	menu_icon.style.display = 'block'
-	open_icon.style.display = 'none'
+	closeMenu()
 
 	if (window.innerWidth > 960) {
 
