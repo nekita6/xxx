@@ -47,7 +47,6 @@ svg{
 .title,
 #nav{
 	padding-top: 80px;
-
 }
 
 #header{ 
@@ -134,7 +133,7 @@ svg{
 	height: 200px;
 	background: rgba(255, 252, 252, .66) no-repeat;
 	background-image: url(../img/title_bg.png);
-	background-position: top center;
+	background-position: center 80px;
 	background-size: cover;
 	text-align: center;
 }
