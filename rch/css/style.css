@@ -421,6 +421,72 @@ h1:hover {
 	margin-bottom: 0px;
 }
 
+#music{
+    position: absolute;
+    top: 50px;
+    right: 40px;
+    bottom: 50px;
+    left: 40px;
+}
+
+#musicContainer{
+	margin-top: 50px;
+	width: 100%;
+	height: calc(80% - 50px);
+	display: flex;
+	justify-content: space-between;
+}
+
+.musicBox{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 7vw;
+	height: 100%;
+	background: #eee;
+	box-shadow: 0 0 48px rgba(0, 0, 0, .21);
+	transition: box-shadow .5s ease-in-out;
+}
+
+.musicBox:hover{
+	box-shadow: 0 0 21px rgba(0, 0, 0, .17);
+	cursor: pointer;
+}
+
+#timerContainer{
+	width: 100%;
+	height: 20%;
+	position: relative;
+}
+
+#durationBox{
+	position: absolute;
+	bottom: 0;
+	background: #eee;
+	bottom: 6%;
+	width: 100%;
+	height: 6%;
+}
+
+#duration{
+	background: #ddd;
+	height: 100%;
+	width: 66%;
+	transition: all .5s ease-in-out;
+}
+
+#durationBox:hover{
+	cursor: pointer;
+}
+
+#durationBox:hover #duration{
+	background: #333;
+	height: 100%;
+	width: 66%;
+	box-shadow: 0 0 48px rgba(0, 0, 0, .21);
+}
+
+
 @media (max-width: 768px), (max-height: 320px) {
 
 	#header a,
@@ -548,10 +614,9 @@ h1:hover {
 	
 	#contactBox{
 		display: block;
-		position: absolute;
 		left: 0;
-		bottom: 50px;
 		width: 100%;
+		margin-bottom: 50px;
 	}
 
 	#contactBox h2{
@@ -591,6 +656,43 @@ h1:hover {
 	#aboutBox{
 		padding: 5% 5%;
 	}
+
+	#music{
+	    bottom: 0;
+	}
+
+	#musicContainer{
+		height: calc(90% - 50px);
+		flex-direction: column;
+	}
+
+	.musicBox{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 6vh;
+		background: #eee;
+		box-shadow: 0 0 48px rgba(0, 0, 0, .21);
+		transition: box-shadow .5s ease-in-out;
+	}
+
+	.musicBox:hover{
+		box-shadow: 0 0 21px rgba(0, 0, 0, .17);
+		cursor: pointer;
+	}
+
+	#timerContainer{
+		width: 100%;
+		height: 10%;
+		position: relative;
+	}
+
+	#durationBox{
+		bottom: 35%;
+	}
+
+
 
 }
 
