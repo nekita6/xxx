@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ruslan Chudin</title>
+	<link rel="stylesheet" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+	<script src="js/menu.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/calc.js"></script>
+	<script src="js/jquery.fancybox-1.3.4.pack.js"></script>
+</head>
+<body>
+	
+	<a href="portfolio.html" id="back_icon"></a>
+	<div id="menu_icon"></div>
+
+	<div id="menu">
+		<a href="portfolio.html">ПОРТФОЛИО</a>
+		<a href="about.html">ОБО МНЕ</a>
+		<a href="music.html">МУЗЫКА</a>
+		<a href="contact.html">КОНТАКТЫ</a>
+	</div>
+
+	<div id="header">
+		<h2>КАЛЬКУЛЯТОР</h2>
+	</div>
+	
+	<form id="calc">
+
+		<select class="conv type" id="calc_conv_type">
+			<option data-unit="m">Длина</option>
+			<option data-unit="m2">Площадь</option>
+			<option data-unit="m3">Объём</option>
+			<option data-unit="kg">Вес</option>
+			<option data-unit="kg/m3">Плотность</option>
+			<option data-unit="h">Сила</option>
+			<option data-unit="pa">Давление</option>
+			<option data-unit="1/min">Частота</option>
+			<option data-unit="m/sec">Скорость</option>
+			<option data-unit="sec">Время</option>
+		</select>
+		
+		<div id="calc_conv_content">
+			<div data-index="0">
+				  <input type="number" min="0" id="calc_conv_0">
+				  <span>м</span>
+			</div>
+			<div data-index="1">
+				<input type="number" min="0" id="calc_conv_1">
+				<span>мм</span>
+			</div>
+			<div data-index="2">
+				<input type="number" min="0" id="calc_conv_2">
+				<span>дюйм</span>
+			</div>
+			<div data-index="3">
+				<input type="number" min="0" id="calc_conv_3">
+				<span>фут</span>
+			</div>
+			<div class="reset">
+				<a class="vis">Очистить</a>
+			</div>
+		</div>
+
+	</form>
+
+	<div class="footer footer_x">
+		<a href="index.html">главная</a>
+		<a href="contact.html">контакты</a>
+		<a href="about.html">обо мне</a>
+		<a href="music.html">музыка</a>
+	</div>
+</body>
+</html>

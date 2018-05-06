@@ -7,6 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 	<script src="http://code.jquery.com/jquery-3.3.1.js"></script>
 	<script src="js/menu.js"></script>
+	<script src="js/main.js"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 </head>
 <body>
 	
@@ -14,32 +16,52 @@
 	<div id="menu_icon"></div>
 
 	<div id="menu">
-		<a href="portfolio.html">Портфолио</a>
-		<a href="program.html">Программы</a>
-		<a href="hobby.html">Хобби</a>
-		<a href="contact.html">Контакты</a>
+		<a href="portfolio.html">ПОРТФОЛИО</a>
+		<a href="about.html">ОБО МНЕ</a>
+		<a href="music.html">МУЗЫКА</a>
+		<a href="contact.html">КОНТАКТЫ</a>
 	</div>
 
 	<div id="header">
-		<h2>Контакты</h2>
+		<h2>КОНТАКТЫ</h2>
 	</div>
+	
+	<div class="scrollHide scrollHideFlex">
+		<div id="contact">
+			<div id="contactBox">
+				<h2>Контактная информация</h2>
+				<p>380(71) 379 05 63</p>
+				<p>ruslan_chudin@mail.ru</p>
+				<p id="hiddenP">Социальные сети:</p>
+				<div class="social">
+				<a href="https://vk.com/notatikin" target="_blank">
+					<i class="fab fa-vk"></i>
+				</a>
+				<a href="https://www.instagram.com/ignatchenkon/" target="_blank">
+					<i class="fab fa-instagram"></i>
+				</a>
+				<a href="https://t.me/in008" class="clear_m_r" target="_blank">
+					<i class="fab fa-telegram-plane"></i>
+				</a>					
+				</div>
 
-	<div id="content">
-		<div class="mid_text">
-			<p>&#60; ☎ &#62;</p>
-			<p>Как связаться?</p>
-			<p>Звонок (071)-379-05-63</p>
-			<p>Письмо ruslan_chudin@mail.ru</p>
-			<p>Сообщение vk.com/ru_mr</p>
-			<p>&#60; /☎ &#62;</p>
+			</div>
+			<div id="contactForm">
+				<form>
+					<input type="name" placeholder="имя" autofocus required>
+					<input id="email" type="email" placeholder="почта" maxlength="30" required>
+					<textarea id="message" placeholder="сообщение" wrap="hard" cols="10" maxlength="200" required></textarea>
+					<input id="msg_btn" type="submit" value="Отправить">
+				</form>
+			</div>
 		</div>
 	</div>
 
 	<div class="footer footer_x">
-		<a href="portfolio.html">главная</a>
-		<a href="portfolio.html">портфолио</a>
-		<a href="hobby.html">хобби</a>
-		<a href="program.html">программы</a>
+		<a href="index.html">главная</a>
+		<a href="contact.html">контакты</a>
+		<a href="about.html">обо мне</a>
+		<a href="music.html">музыка</a>
 	</div>
 </body>
 </html>
