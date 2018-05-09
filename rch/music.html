@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 	<meta charset="UTF-8">
 	<title>Ruslan Chudin</title>
@@ -7,7 +7,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 	<script src="http://code.jquery.com/jquery-3.3.1.js"></script>
 	<script src="js/menu.js"></script>
-	<script src="js/main.js"></script>
 </head>
 <body>
 	
@@ -24,27 +23,69 @@
 	<div id="header">
 		<h2>МУЗЫКА</h2>
 	</div>
-	
+		<script>
+			$(document).ready(function() {
+				$(".musicBox").click(function() {
+					var song = $(this).parent().children("input").attr("value");
+					var audio = document.getElementById("audio");
+					$("#audio").attr("src", song);
+					audio.play();
+				});
+					$(".pauseBox").click(function() {
+						audio = document.getElementById("audio");
+						if(audio.paused)
+						audio.play();
+						else
+						audio.pause();
+					});
+			});
+		</script>
+		<audio crc="" id="audio" controls></audio>
 	<div id="music">
 		<div id="musicContainer">
-			<div class="musicBox">R</div>
-			<div class="musicBox">R</div>
-			<div class="musicBox">R</div>
-			<div class="musicBox">R</div>
-			<div class="musicBox">R</div>
-			<div class="musicBox">R</div>
-			<div class="musicBox">R</div>
-			<div class="musicBox">R</div>
-			<div class="musicBox">R</div>
-			<div class="musicBox">R</div>
-		</div>
-		<div id="timerContainer">
-			<div id="durationBox">
-				<div id="duration"></div>
+			<div class="audio">
+				<input type="hidden" value="http://cdndl.zaycev.net/78816/3770405/oxxxymiron_-_gorod_pod_podoshvoy_%28zaycev.net%29.mp3">
+				<div class="musicBox"></div>
 			</div>
-		</div>		
+			<div class="audio">
+				<input type="hidden" value="http://cdndl.zaycev.net/78816/3807145/oxxxymiron_-_gde_nas_net_%28zaycev.net%29.mp3">
+				<div class="musicBox"></div>
+			</div>
+			<div class="audio">
+				<input type="hidden" value="http://cdndl.zaycev.net/78816/3803227/oxxxymiron_-_perepleteno_%28zaycev.net%29.mp3">
+				<div class="musicBox"></div>
+			</div>
+			<div class="audio">
+				<input type="hidden" value="http://cdndl.zaycev.net/78816/3807095/oxxxymiron_-_poligon_%28zaycev.net%29.mp3">
+				<div class="musicBox"></div>
+			</div>
+			<div class="audio">
+				<input type="hidden" value="http://cdndl.zaycev.net/78816/3800723/oxxxymiron_-_gorgorod_%28zaycev.net%29.mp3">
+				<div class="musicBox"></div>
+			</div>
+			<div class="audio">
+				<input type="hidden" value="http://cdndl.zaycev.net/78816/4350509/oxxxymiron_-_yeti_i_deti_%28zaycev.net%29.mp3">
+				<div class="musicBox"></div>
+			</div>
+			<div class="audio">
+				<input type="hidden" value="http://cdndl.zaycev.net/78816/4285597/oxxxymiron_-_krokodilovy_slezy_%28zaycev.net%29.mp3">
+				<div class="musicBox"></div>
+			</div>
+			<div class="audio">
+				<input type="hidden" value="http://cdndl.zaycev.net/78816/3925575/oxxxymiron_-_bashnya_iz_slonovoy_kosti_%28zaycev.net%29.mp3">
+				<div class="musicBox"></div>
+			</div>
+			<div class="audio">
+				<input type="hidden" value="http://cdndl.zaycev.net/78816/6137549/oxxxymiron_-_mashina_progressa_%28zaycev.net%29.mp3">
+				<div class="musicBox"></div>
+			</div>
+			<div class="audio">
+				<input type="hidden" value="http://cdndl.zaycev.net/78816/4328254/oxxxymiron_-_vostochnyy_mordor_%28zaycev.net%29.mp3">
+				<div class="musicBox"></div>
+			</div>
+			<div class="pauseBox">пауза</div>
+		</div>	
 	</div>
-
 	<div class="footer footer_x">
 		<a href="index.html">главная</a>
 		<a href="contact.html">контакты</a>
