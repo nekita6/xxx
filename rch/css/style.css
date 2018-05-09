@@ -184,9 +184,6 @@ audio{
 }
 
 .portfolio_box{
-	display: flex;
-	align-items: center;
-	justify-content: center;
 	height: 160px;
 	min-height: 40px;
 	width: 640px;
@@ -199,14 +196,20 @@ audio{
 }
 
 .portfolio_box h1{
-	position: absolute;
 	color: #fff;
+	position: relative;
+	top: calc(50% - 20px);
+	height: 32px;
+	overflow: hidden;
 	font-size: 32px;
 	font-weight: 800;
 	z-index: 21;
 }
 
 .portfolio_box img{
+	position: absolute;
+	top: 0;
+	left: 0;
 	max-width: 100%;
 	min-height: 100%;
 	filter: grayscale(100);
@@ -618,11 +621,13 @@ audio{
 	}
 
 	.portfolio_box h1{
+		top: calc(50% - 2.5vmin);
+		height: 5vmin;
 		font-size: 5vmin;
 	}
 
 	.portfolio_box:hover.portfolio_box h1{
-		letter-spacing: normal;
+	
 	}
 
 	.projectBox{
@@ -768,10 +773,6 @@ audio{
 	.portfolio_box img{
 		opacity: 0;
 	}
-
-	.portfolio_box:hover.portfolio_box h1{
-		letter-spacing: normal;
-	}	
 	
 	#calc{
 		bottom: 0px;
