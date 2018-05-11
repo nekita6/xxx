@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700');
 
 * {
 	padding: 0;
@@ -33,10 +33,21 @@ h2 {
 	transition: all 0.5s ease-out;
 }
 
+p{
+	font-family: Montserrat;
+	font-weight: 400;
+}
+
 h1:hover {
 	letter-spacing: 1em;
 
 }
+
+h3{
+	font-family: Montserrat;
+	font-weight: 300;
+}
+
 audio{
 	transition: transform 0.5s ease-out;
 	transform: translateY(calc(-100vh + 50px));
@@ -63,14 +74,55 @@ audio{
 	transition: transform 0.5s ease-out;
 }
 
-#back_icon {
-	background: url(../img/close.svg) no-repeat;
-	background-position: center center;
+#backIcon{
 	height: 50px;
-	width: 22px;
-	display: block;
+	width: 28px;
 	position: absolute;
 	right: 2%;
+	z-index: 228;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;	
+}
+
+#backFline,
+#backSline,
+#backTline{
+	position: relative;
+	height: 2px;
+	width: 100%;
+	background: #000;
+	transition: all 0.1s ease;
+}
+
+#backIcon:hover #backFline{
+	transform: rotate(0);
+}
+
+#backIcon:hover #backSline{
+	transform: rotate(35deg);
+	width: 60%;
+	top: 3px;
+}
+
+#backIcon:hover #backTline{
+	transform: rotate(-35deg);
+	width: 60%;
+	top: -9px;
+}
+
+#backFline{
+	transform: rotate(-45deg);
+}
+
+#backSline{
+	top: -2px;
+	transform: rotate(45deg);
+}
+
+#backTline{
+	top: -4px;
+	transform: rotate(-45deg);
 }
 
 .footer{
@@ -306,9 +358,6 @@ audio{
 }
 
 .artBox{
-	display: flex;
-	align-items: center;
-	justify-content: center;
 	width: 360px;
 	height: 420px;
 	margin-top: 50px;
@@ -407,10 +456,13 @@ audio{
 }
 
 #contactForm input:focus,
-#contactForm input:focus
-#contactForm textarea:focus{
+#contactForm input:focus{
 	box-shadow: 0 0 48px rgba(0, 0, 0, .21);
 	overflow: hidden;
+}
+
+#contactForm textarea:focus{
+	box-shadow: 0 0 48px rgba(0, 0, 0, .21);
 }
 
 #contactForm input:first-child{
@@ -490,29 +542,42 @@ audio{
 }
 
 .musicBox{
+	transform: rotate(-180deg);
 	display: flex;
-	align-items: center;
-	justify-content: center;
+	align-items: flex-start;
+	justify-content: flex-end;
+ 	padding: 2vh 1vw;
+	box-sizing: border-box; 
 	width: 7vw;
 	height: 100%;
+	font-size: 	1.7vh;
+	letter-spacing: .1em;
 	background: #eee;
 	box-shadow: 0 0 48px rgba(0, 0, 0, .21);
-	transition: box-shadow .5s ease-in-out;
+	transition: box-shadow .5s ease-in-out,
+				letter-spacing .5s ease-in-out;
+	writing-mode: tb-rl;
+	position: relative;
+	font-weight: lighter;
 }
 
 #btnContainer{
-	width: 100%;
+	width: 100vw;
 	height: 7vw;
-	position: relative;
-	padding: 2vw 0;
+	position: fixed;
+	padding: 3vw 0;
+	left: 0;
+	bottom: 50px;
 }
 
 .musicBox:hover{
 	box-shadow: 0 0 21px rgba(0, 0, 0, .17);
 	cursor: pointer;
+	letter-spacing: .05em;
+	background: #efefef;
 }
 
-#btnContainer .pauseBox{
+.pauseBox{
 	background: url(../img/play.svg) no-repeat;
     background-position: center center;
     background-color: white;
@@ -524,7 +589,8 @@ audio{
 	transition: box-shadow .5s ease-in-out;
 	margin: 0 auto;
 }
-#btnContainer .pauseBox:hover{
+
+.pauseBox:hover{
 	box-shadow: 0 0 21px rgba(0, 0, 0, .17);
 	cursor: pointer;
 }
@@ -673,7 +739,7 @@ audio{
 	}
 
 	.projectBox img{
-		width: 80%;
+		width: 100%;
 	}
 
 	.aboutProject .dBtn{
@@ -772,21 +838,30 @@ audio{
 		flex-direction: column;
 	}
 
-	.musicBox,
-	.pauseBox{
-		display: flex;
+	.musicBox{
+		transform: rotate(0);
 		align-items: center;
+		writing-mode: lr-tb;
+		display: flex;
 		justify-content: center;
 		width: 100%;
-		height: 5vh;
-		box-shadow: 0 0 48px rgba(0, 0, 0, .21);
-		transition: box-shadow .5s ease-in-out;
+		height: 100px;
+		padding: 2vh 3vh;
+		margin-top: 2vh;
+		margin-bottom: 3vh;
 	}
-
+	.pauseBox{
+	    background-size: 40px;
+	    height: 60px;
+	    width: 60px;
+	}
 	.pauseBox{
 		font-size: 2vh;
 	}
 
+	#btnContainer{
+		bottom: 50px;
+	}
 }
 
 @media (max-height: 320px) {
